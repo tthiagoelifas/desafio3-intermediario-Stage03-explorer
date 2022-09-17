@@ -79,8 +79,8 @@ main p {
   line-height: 1.5rem;
 
 
-  width: 30.5rem;
-  height: 7.5rem;
+  min-width: 30.5rem;
+  min-height: 7.5rem;
   margin-inline: auto;
   margin-bottom: 6.3rem;
 
