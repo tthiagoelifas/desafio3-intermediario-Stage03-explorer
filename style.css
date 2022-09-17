@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-root: #4A4E69;
+  --bg-primaty: #8E9AAF;
+  --bg-secondary: #EFF1FF;
+  --bg-templates: #FEEAFA;
+
+  --ff-titles: font-family: 'Staatliches', cursive;
+  --ff-text: font-family: 'Palanquin', sans-serif;
+  --fw-texts: 400;
+
+  --fc-title: #FFFFFF;
+  --fc-text: #23053A;
+  --fc-secondary: #4A4E69;
+}
+
+html{
+  background: var(--bg-root);
+}
+
+body {
+  max-width: 38.4rem;
+  margin: auto;
+
+
+}
+
+header {
+  background: var(--bg-primaty);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  padding-block: 3.2rem;
+  
+}
+
+header h1 { 
+  background: #CBC0D3;
+
+  font-family: var(--ff-titles);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: var(--fw-texts);
+  
+  min-height: 4.9rem;
+
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 5%;
+  color: var(--fc-title);
+
+  margin-top: 3.2rem;
+}
+
+main {
+  background: var(--bg-secondary);
+  padding: 3.2rem;
+}
+
+main p {
+  font-family: var(--ff-text);
+  font-style: normal;
+  text-align: center;
+  font-weight: var(--fw-texts);
+
+  font-size: 2rem;
+  line-height: 1.5rem;
+
+
+  width: 30.5rem;
+  height: 7.5rem;
+  margin-inline: auto;
+  margin-bottom: 6.3rem;
+
+  color: var(--fc-text);
+
+
+
+}
+
+main section{
+  position: relative;
+}
+
+section img{
+  margin-bottom: 3.2rem;
+
+  transition: transform;
+  animation: fromBottom 1s backwards;
+}
+
+main section h2{
+  
+
+  font-family: var(--ff-titles);
+  font-weight: var(--fw-texts);
+  text-transform: uppercase;
+  color: var(--fc-secondary);
+
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+
+  background: var(--bg-templates);
+  border-radius: 2.6rem;
+  
+  width: 11.2rem;
+  height: 3.5rem;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+
+  transition: transform;
+  animation: fromTop 1s 500ms backwards;
+
+
+}
+
+
+@keyframes fromBottom {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+      
+  }
+
+  to {
+
+    transform: translateY(0);
+    opacity: 1;
+
+
+  }
+
+}
+
+@keyframes fromTop {
+  from {
+      transform: translateY(-30px);
+      opacity: 0;
+      
+  }
+
+  to {
+
+    transform: translateY(0);
+    opacity: 1;
+
+
+  }
+
+}
