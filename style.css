@@ -31,6 +31,8 @@ body {
 .page {
   max-width: 38.4rem;
   margin: 0 auto;
+  display: grid;
+  justify-content: center;
 }
 
 img {
@@ -156,6 +158,9 @@ main > p {
 }
 
 .ice {
+}
+
+footer{
   display: none;
 }
 
@@ -194,41 +199,94 @@ main > p {
 
 }
 
-
-
-@media (min-width: 700px){
+@media (min-width: 900px){
 
   .page{
-    max-width: 128rem;
-    display: flex;
-  }
-
-  header {
     
-    max-width: 37.7rem;
+    grid-template-areas: 
+    "header main" 
+    "header footer"
+    ;
   }
 
+  header{
+    grid-area: header;
+    min-width: 37.7rem;
+  }
+  
   header p {
     display: block;
-
   }
+
+  main{
+    grid-area: main;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 34% 10rem 36%;
+
+    grid-template-areas: 
+    "A B"
+    "D B"
+    "D E"
+    ;
+
+    min-width: 53.6rem;
+    gap: 3.2rem;
+  }
+
+  main div:nth-child(2){
+    grid-area: A;
+  }
+
+  main div:nth-child(3){
+    grid-area: B;
+  }
+
+  main div:nth-child(5){
+    grid-area: D;
+  }
+
+  main div:nth-child(6){
+    grid-area: E;
+  }
+
+  main p {
+    display: none;
+  }
+  .cards img{
+    margin: 0;
+  }
+
+  footer{
+    grid-area: footer;
+    display: flex;
+    background: var(--bg-secondary);
+    justify-content: center;
+    padding-bottom: 4.6rem;
+  }
+
  
+}
+
+@media (max-width:1279px){
+  .ice{
+    display: none;
+  }
+}
+
+@media (min-width:1280px){
   main {
-    max-height: 72rem;
-    position: relative;
-    
-    /* padding: 6.4rem; */
-    
 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 9.8rem;
-
+    grid-template-rows: 33% 13rem 33%;
+    
     grid-template-areas: 
     'A B C'
     'D B F'
     'D E F';
 
     gap: 3.2rem;
+
+    min-width: 91rem;
   }
 
   
@@ -238,45 +296,28 @@ main > p {
   }
   main div:nth-child(3){
     grid-area: B;
+
   }
   main div:nth-child(4){
     grid-area: C;
+
   }
   main div:nth-child(5){
     grid-area: D;
+
   }
   main div:nth-child(6){
     grid-area: E;
+
   }
   main div:nth-child(7){
     grid-area: F;
+
   }
 
-  .cards{
-    object-fit: cover;
-
-    width: 100%;
-    height: auto;
-  }
-
-  .cards h2 {
-    display: none;
-  }
-  
-  main > p{
-    display: none;
-  }
-
-  .ice{
+  .ice {
     display: block;
-  }   
-
-}
-
-@media (min-width: 950px){
-
-  main{
-    padding: 6.4rem;
-
   }
+
+  
 }
