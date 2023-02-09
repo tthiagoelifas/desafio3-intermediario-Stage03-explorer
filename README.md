@@ -11,7 +11,6 @@ Projeto de uma loja de sorvetes com animções e reposividade!
 
 - HTML
 - CSS
-- JavaScript
 - Git
 - Github
 
