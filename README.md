@@ -19,3 +19,9 @@ Projeto de uma loja de sorvetes com animções e reposividade!
 
 ![preview](./assets/preview.png)
 
+
+## Site do Projeto
+
+
+[Link do Projeto](https://tthiagoelifas.github.io/desafio3-intermediario-Stage03-explorer/)
+
